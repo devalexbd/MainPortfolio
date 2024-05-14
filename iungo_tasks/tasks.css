@@ -66,3 +66,23 @@ input{
     border-radius: 30px;
     margin-top: 50px;
 }
+
+h1{
+    font-weight:900;
+}
+
+#guess{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#guess input{
+    margin-top:10px;
+    border-radius: 10px;
+}
+
+#guess button{
+    margin-top: 10px;
+    border-radius: 10px;
+}

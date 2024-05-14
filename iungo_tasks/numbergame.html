@@ -13,13 +13,24 @@
         <button class="header-button" onClick="redirect('../iungo.html')">Back</button>
     </header>
 
+    <h1>Number Guessing Game!</h1>
 
+    <div id="guess">
+        <h3 id="guess-display"></h3>
+        <h2 id="guess-temp"></h2>
+        <button id="guess-start">Start!</button>
+        <input id="guess-input" name="" type="number" disabled>
+        <button id="guess-button" disabled>Guess!</button>
+        <button id="guess-reset" disabled>Reset</button>
+    </div>
 
     <div id="explain">
-
+        <p>This is a small JavaScript program that generates a pseudo-random integer and compares it to the number inputted by the user.</p>
+        <p>If the number is too small it will update the display and likewise if it's too high and if you win. It will also adjust the colour of the text depending on how close or far you are from the answer.</p>
+        <p>You have six attempts until you get a game over and have to restart the game.</p>
     </div>
 
     <script src="../app.js"></script>
-    <script src="tasks.js"></script>
+    <script src="numberguessinggame.js"></script>
 </body>
 </html>
