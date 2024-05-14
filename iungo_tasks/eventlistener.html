@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tasks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Event Listeners</title>
+</head>
+<body>
+    <header>
+        <button class="header-button" onClick="redirect('../iungo.html')">Back</button>
+    </header>
+
+    <div id="main">
+        <div id="seg1">
+            <p class="taskHeader">TASK ONE - TASK FOUR - EXTRA TASK</p>
+            <h1 id="colourTitle">The Box of Colour</h1>
+            <p class="info">[TASK ONE] Created a box that changes colour when typing in a key.</p>
+            <p class="info">[TASK FOUR] Created a button that changes the colour randomly from an array.</p>
+            <p class="info">[EXTRA TASK] Instead of an array, generate random colours from the button.</p>
+            <div id="boxBox">
+                <div class="box" id="box"><p>Main</p></div>
+                <div class="box" id="box2"><p>Complimentary</p></div>
+            </div>
+            <p>R = Red | T = Blue | Y = Pink</p>
+            <p>E = Return to Neutral</p>
+            <button id="btn3">Random!</button>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="seg2">
+            <p class="taskHeader">TASK TWO</p>
+            <h1 id="inputTitle">Input Box Colours</h1>
+            <p class="info">Make it so that the input box changes colour when pressing a key.</p>
+            <input id="colourInput" type="text" placeholder="Type a colour">
+            <p>ArrowUp = Yellow & Red</p>
+            <button id="btn">Return to Neutral</button>
+        </div>
+
+        <br>
+        <br>
+
+        <id id="seg3">
+            <p class="taskHeader">TASK THREE</p>
+            <h1 id="gameTitle">Counting Game</h1>
+            <p class="info">Create a counter that increases and decreases based on the keys you press.</p>
+            <p id="number">0</p>
+            <p>ArrowLeft = Decrease | ArrowRight = Increase</p>
+            <p>I = -100 | O = 100</p>
+            <p>K = -100000000 | L = 100000000</p>
+            <button id="btn2">Return to Neutral</button>
+        </id>
+
+        <br>
+    </div> 
+
+    <div id="explain">
+        <p>For these tasks, I had to create a series of buttons and inputs that would be detected through JavaScript and cause various changes to happen on-screen.</p>
+    </div>
+
+    <script src="../app.js"></script>
+    <script src="eventlistener.js"></script>
+</body>
+</html>
