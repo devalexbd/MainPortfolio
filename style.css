@@ -1,0 +1,89 @@
+body {
+    font-family: "Ubuntu Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    background-color: #131316;
+    color:#ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #583b6b;
+    height: 50px;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #583b6b;
+    height: 50px;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-button {
+    background-color: #a380bb;
+    height: 100%;
+    width: 100px;
+    border: none;
+    transition: 0.25s;
+}
+
+.header-button:hover {
+    background-color: #d6bee6;
+    cursor: pointer;
+}
+
+.main-button {
+    background-color: #a380bb;
+    height: 10vw;
+    width: 15vw;
+    border: none;
+    transition: 0.25s;
+    margin: 10px;  
+}
+
+.main-button:hover {
+    background-color: #d6bee6;
+    cursor: pointer;    
+}
+
+#iungo-main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section {
+    display:grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter:blur(5px);
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.show {
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0);
+}
