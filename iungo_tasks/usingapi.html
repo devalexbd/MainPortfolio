@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tasks.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Using APIs</title>
+</head>
+<body>
+    <header>
+        <button class="header-button" onClick="redirect('../iungo.html')">Back</button>
+    </header>
+
+    <div id="main-one">
+        <div class="segment">
+            <h1 id="api-title">DOG</h1>
+            <h4></h4>
+            <h4>Click on buttons to modify image.</h4>
+            <div id="dog-buttons">
+                <button class="btn" id="btn-big">Make bigger</button>
+                <button class="btn" id="btn">New Dog</button>
+                <button class="btn" id="btn-small">Make smaller</button>
+            </div>
+            <button class="btn" id="btn2">Not a dog</button>
+            <img src="" alt="" id="image">
+        </div>
+    
+        <br>
+        <div class="segment">
+            <h1>LOREM PICSUM</h1>
+            <h4>Click the button to change the image.</h4>
+            <div>
+                <button class="btn" id="picsum-btn">New Picture</button>
+            </div>
+            <h4>Enter your own seed to generate an image.</h4>
+            <div id="ownseed-buttons">
+                <input type="text" id="own-seed" placeholder="Input your own seed...">
+                <button class="btn" id="picsum-btn2">Go</button>
+            </div>
+            <img src="" alt="" id="image2">
+            <p id="author"></p>
+            <p id="seed-id"></p>
+        </div>
+    </div>
+
+    <div id="explain">
+        <h4>API - Application Programming Interface</h4>
+        <p>An API is a way that two or more pieces of software communicate with each other.</p>
+        <p>In this document, I have used APIs to grab random images from two different websites.</p> 
+    </div>
+
+    <script src="../app.js"></script>
+    <script src="usingapi.js"></script>
+    <script src="usingapi2.js"></script>
+</body>
+</html>
