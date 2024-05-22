@@ -9,24 +9,35 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #583b6b;
-    height: 50px;
+#bg-main {
+    background-color: rgb(9, 0, 17);
+    height: 90vh;
     width: 100%;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    z-index: -1;
+    position:absolute;
+    border-radius: 0 0 30% 30%;
 }
 
-footer {
-    background-color: #583b6b;
+header {
+    /* background-color: #583b6b; */
+    background-color: rgb(0, 0, 0, 0);
     height: 50px;
     width: 100%;
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index:1;
+    padding: 5px 0;
+    transition:0.35s;
+}
+
+.nav-change {
+    height:50px;
+    padding: 0;
+    background-color: #3b234b;
 }
 
 .header-button {
@@ -34,12 +45,68 @@ footer {
     height: 100%;
     width: 100px;
     border: none;
-    transition: 0.25s;
+    border-radius: 20px;
+    transition: 0.35s;
+    margin:0 5vw;
+}
+
+.header-button-change {
+    height:100%;
+    margin:0;
+    border-radius: 0;
 }
 
 .header-button:hover {
     background-color: #d6bee6;
     cursor: pointer;
+}
+
+.dropdown {
+    height: 100%;
+    display:inline-block;
+    position:relative;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: 0.35s;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: flex;
+    flex-direction: column;
+    background-color: #a380bb;
+    transition:0.25s;
+    height: 5vh;
+    margin: 1vh 0 0 0;
+    color:black;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #d6bee6;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transform:translateY(0);
+}
+
+.dropdown:hover .header-button {
+    background-color:#d6bee6;
 }
 
 .main-button {
@@ -67,6 +134,7 @@ section {
     place-items: center;
     align-content: center;
     min-height: 100vh;
+    text-align: center;
 }
 
 .hidden {
@@ -86,4 +154,14 @@ section {
     opacity: 1;
     filter:blur(0);
     transform: translateX(0);
+}
+
+footer {
+    background-color: #3b234b;
+    height: 50px;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
