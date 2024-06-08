@@ -8,7 +8,7 @@ class Item {
 }
 
 class Store{
-    constructor(name, inventory){
+    constructor(name){
         this.name = name,
             this.inventory = {}
     }
@@ -21,6 +21,25 @@ class Store{
             this.inventory[product.name] = product
         } else {
             console.log(error)
+        }
+    }
+
+    // Creating a method that removes items from Store's inventory
+    remove_item(product){
+        if(product in this.inventory){
+            delete this.inventory[product]
+        } else {
+            console.log(`There is no item called ${product} to remove.`)
+        }
+    }
+
+    // Creating a method that updates an item's quantity
+    update_quantity(product, newQuantity){
+        if(product in this.inventory){
+            this.inventory[product].quantity = newQuantity
+            console.log(`The quantity of ${product} has changed to ${newQuantity}`)
+        } else {
+            console.log(`There is no item called ${product} to update.`)
         }
     }
 }
@@ -37,4 +56,11 @@ let The_Shop = new Store('The Shop')
 The_Shop.add_item(apples)
 The_Shop.add_item(grapes)
 The_Shop.add_item(oranges)
+console.log(The_Shop)
+
+The_Shop.remove_item('pears')
+The_Shop.remove_item('apple')
+console.log(The_Shop)
+
+The_Shop.update_quantity('orange', 444)
 console.log(The_Shop)
