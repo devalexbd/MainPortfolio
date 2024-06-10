@@ -11,37 +11,43 @@
     <script defer src="app.js"></script>
 </head>
 <body>
-    <div id="bg-main"></div>
+    <div id="bg-main">
+        <img src="./assets/images/example.jpg" alt="Div Image" id="bg-image">
+    </div>
 
     <header>
         <div class="dropdown">
-            <button class="header-button">Iungo Tasks</button>
+            <button class="header-button">Learning Exercises</button>
             <div class="dropdown-content">
-                <a href="https://abdillustration.github.io/MainPortfolio/iungo_tasks/password.html">Password Checker</a>
-                <a href="https://abdillustration.github.io/MainPortfolio/iungo_tasks/numbergame.html">Number Game</a>
-                <a href="https://abdillustration.github.io/MainPortfolio/iungo_tasks/eventlistener.html">JS Event Listener</a>
-                <a href="https://abdillustration.github.io/MainPortfolio/iungo_tasks/usingapi.html">API Task</a>
+                <a href="https://abdillustration.github.io/MainPortfolio/iungo_tasks/password.html" class="dropdown-element">Password Checker</a>
+                <a href="https://abdillustration.github.io/MainPortfolio/iungo_tasks/numbergame.html" class="dropdown-element">Number Game</a>
+                <a href="https://abdillustration.github.io/MainPortfolio/iungo_tasks/eventlistener.html" class="dropdown-element">JS Event Listener</a>
+                <a href="https://abdillustration.github.io/MainPortfolio/iungo_tasks/usingapi.html" class="dropdown-element">API Task</a>
             </div>
         </div>
         <button class="header-button" onClick="redirect('iungo.html')">About Me</button>
-        <button class="header-button" onClick="redirect('iungo.html')">About Me</button>
+        <button class="header-button" onClick="newTab('https://www.abdillustration.com')">Art Portfolio</button>
     </header>
     
-    <section class="hidden">
+    <section id="text-segment-1">
         <h1>Alex's Portfolio</h1>
         <h3>Software Developer and Artist</h3>
         <p>My developer portfolio is currently a work-in-progress!</p>
     </section>
 
     <section class="hidden">
-        <h1>Skills:</h1>
-        <p>I can create webpages and applications using: HTML, CSS and JavaScript.</p>
-        <p>Currently I am learning to use React and JSX on the Iungo Solutions Software Development course.</p>
+        <div class="segment-background">
+            <h1>Skills:</h1>
+            <p>I can create webpages and applications using: HTML, CSS, JavaScript and TypeScript.</p>
+            <p>Currently I am learning to use React and JSX on the Iungo Solutions Software Development course.</p>
+        </div>
     </section>
 
     <section class="hidden">
-        <h1>Contact Me</h1>
-        <p>alexbdillustration@gmail.com</p>
+        <div class="segment-background">
+            <h1>Contact Me</h1>
+            <p>alexbdillustration@gmail.com</p>
+        </div>
     </section>
 
     <footer>

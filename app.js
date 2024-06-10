@@ -3,6 +3,7 @@
 // has intersected with the viewport, show it and if not
 // then hide it.
 const observer = new IntersectionObserver((entries) => {
+    console.log(entries)
     entries.forEach((entry) => {
         console.log(entry)
         if(entry.isIntersecting){
@@ -19,6 +20,8 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden')
 hiddenElements.forEach((el) => observer.observe(el))
 
+
+
 /**
  * Redirects page
  */
@@ -26,11 +29,19 @@ function redirect(link){
     window.location.replace(link)
 }
 
+/**
+ * Open page in new tab
+ */
+function newTab(link){
+    window.open(link, '_blank')
+}
+
 
 
 // Changing the Header colour when scrolling
 const header = document.querySelector('header')
 const headerButton = document.getElementsByClassName('header-button')
+const dropdownElement = document.getElementsByClassName('dropdown-element')
 console.log(headerButton)
 // Creating a new div at the top of screen
 // Use if for when it goes off or on screen,
@@ -58,7 +69,31 @@ const navObserver = new IntersectionObserver((entries) => {
         headerButton[i].classList.toggle('header-button-change', !entries[0].isIntersecting)
     }
 
+    for(i=0; i<dropdownElement.length; i++) {
+        dropdownElement[i].classList.toggle('dropdown-button', !entries[0].isIntersecting)
+    }
+
     // headerButton.classList.toggle('header-button-change', !entries[0].isIntersecting)
 })
 
 navObserver.observe(scrollWatcher)
+
+
+
+const backgroundImages = document.getElementById('bg-image')
+
+const imgObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.remove('blur-image')
+            console.log('Blurring')
+        } else {
+            entry.target.classList.add('blur-image')
+            console.log('Not blurring')
+        }
+    },
+);
+}, {threshold: 1})
+
+imgObserver.observe(backgroundImages)
